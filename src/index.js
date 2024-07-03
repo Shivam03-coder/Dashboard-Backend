@@ -6,7 +6,7 @@ import connectdb from "./database/connectdb.js";
   try {
     await connectdb();
 
-    app.get("/", (req, res) => {
+    app.get("/", (_, res) => {
       res.status(200).json({
         status: "success",
         message: "Shivam Anand",
