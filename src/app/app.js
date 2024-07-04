@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import morgan from "morgan";
 import helmet from "helmet";
+import { userRoutes } from "../routes/userRoutes.js";
 const app = express();
 
 // App mmiddleswares
@@ -30,6 +31,6 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //Routes
-// app.use("/user", userRoutes);
+app.use("/api/v1", userRoutes);
 
 export { app };

@@ -1,6 +1,6 @@
 import { Router } from "express";
+import userControlller from "../controllers/userControlller.js";
 
-export const appRouter = Router();
+export const userRoutes = Router();
 
-appRouter.route().get
-
+userRoutes.route("/user/:id").get(userControlller);

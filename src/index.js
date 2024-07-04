@@ -15,7 +15,7 @@ import connectdb from "./database/connectdb.js";
 
     app.listen(appConfig.PORT || 3030, () => {
       console.log(
-        `Server started at http://localhost:${appConfig.PORT || 3030}/`
+        `Server started at http://localhost:${appConfig.PORT || 3030}`
       );
     });
   } catch (error) {
