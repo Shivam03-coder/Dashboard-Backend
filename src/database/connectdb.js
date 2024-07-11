@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import appConfig from "../configurations/appconfig.js";
 
+
 const connectdb = async () => {
   try {
     mongoose.connection.on("connected", () => {
