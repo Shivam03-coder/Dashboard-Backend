@@ -12,4 +12,4 @@ const AffiliateStatSchema = new mongoose.Schema(
 );
 
 const AffiliateStatmodel = mongoose.model("AffiliateStat", AffiliateStatSchema);
-export default AffiliateStatmodel;
+export  {AffiliateStatmodel};

@@ -25,4 +25,4 @@ const ProductStatSchema = new mongoose.Schema(
 );
 
 const ProductStatmodel = mongoose.model("ProductStat", ProductStatSchema);
-export default ProductStatmodel;
+export  {ProductStatmodel};
