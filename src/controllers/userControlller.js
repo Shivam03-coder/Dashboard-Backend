@@ -1,10 +1,11 @@
-import User from "../models/usermodels.js";
+import { UserModel } from "../models/Usermodels.js";
+
 
 const userControlller = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const user = await User.findById(id);
+    const user = await UserModel.findById(id);
     if (!user) {
       return res.status(500).json({
         status: "failed",
