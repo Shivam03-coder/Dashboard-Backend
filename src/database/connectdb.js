@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 import appConfig from "../configurations/appconfig.js";
 
-
 const connectdb = async () => {
   try {
     mongoose.connection.on("connected", () => {
@@ -12,6 +11,7 @@ const connectdb = async () => {
     });
     await mongoose.connect(appConfig.URI);
 
+    
   } catch (error) {
     console.log("Error", error);
     process.exit(1);

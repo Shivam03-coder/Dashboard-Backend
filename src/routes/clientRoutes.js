@@ -1,7 +1,14 @@
 import express from "express";
+import {
+  ProductsController,
+  CustomerController,TranscationsController,GeographyController
+} from "../controllers/clientsController.js";
 
-const router = express.Router();
+const clientRoutes = express.Router();
 
-router.get("/products", ProductsController);
+clientRoutes.route("/products").get(ProductsController);
+clientRoutes.route("/customer").get(CustomerController);
+clientRoutes.route("/transcations").get(TranscationsController);
+clientRoutes.route("/geography").get(GeographyController);
 
-export default router;
+export default clientRoutes;
