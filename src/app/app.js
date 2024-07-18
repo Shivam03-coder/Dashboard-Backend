@@ -6,6 +6,7 @@ import morgan from "morgan";
 import helmet from "helmet";
 import { userRoutes } from "../routes/userRoutes.js";
 import clientRoutes from "../routes/clientRoutes.js";
+import salesRoutes from "../routes/salesRoutes.js";
 const app = express();
 
 // App mmiddleswares
@@ -34,5 +35,6 @@ app.use(cors());
 //Routes
 app.use("/api/v1", userRoutes);
 app.use("/api/v1/client", clientRoutes);
+app.use("/api/v1/sales", salesRoutes);
 
 export { app };
